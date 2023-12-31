@@ -22,8 +22,14 @@ searchBar.addEventListener("input", e => {
     searchItem = null;
     searchItem = e.target.value;
     if(searchItem){
+    myList.innerHTML = null;
     search(searchItem)};
+    if(searchItem==""){render()}
   });
+searchBar.addEventListener("input", e => {
+    if(e.target.value == null){render();console.log("null")}
+})
+
 
 
 function render() {
