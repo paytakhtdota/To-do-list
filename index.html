@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="container-fluid">
+    <main class="container col-lg-5">
+        <header class="header col-lg">
+            <h1 class="text-primary row justify-content-center">TO DO LIST</h1>
+        </header>
+        <section class="input-group mt-5 pb-1 pt-4">
+            <div class="col-lg-1"> </div>
+            <input type="text" class="form-control" placeholder="Search">
+
+            <div class="col-lg-1"> </div>
+        </section>
+        <section class="list">
+            <h3 class="text-dark ps-1 mt-3">Your Tasks</h3>
+            <ul id="tl" class="list-group list-group-flush p-2">
+                <div class="row btn-group list-group-horizontal p-1">
+                    <li class="list-group-item col-lg-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, debitis.</li>
+                    <button btn-id="sbtn" type="button" class="btn btn-success col-lg-2">success</button>
+                    <button btn-id="dbtn" type="button" class="btn btn-danger col-lg-2">Delete</button>
+                </div>
+            </ul>
+        </section>
+        <section class="input-group mt-5 pb-3">
+
+            <input type="text" class="form-control" placeholder="New Task">
+            <button class="col-lg-2 btn btn-primary" type="submit">Add</button>
+
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
