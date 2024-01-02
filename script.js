@@ -33,7 +33,6 @@ function search(array, searchElement) {  // a function to find any tasks that ma
 
     if(result.length == 0){
         myList.innerHTML = "";
-        myList.ch
         const noMatch = document.createElement("div");
         noMatch.classList.add("alert","alert-danger");
         noMatch.innerHTML = " <strong>No Match Item </strong> Unfortunately, we were unable to find the item you searched for."
@@ -47,7 +46,7 @@ function search(array, searchElement) {  // a function to find any tasks that ma
 
 
 function render(data) {  // Function to render new row with client Data
-
+    if(data.length != 0){
     myList.innerHTML = "";  // make empty myList ul#tl before add new HTML codes
     document.querySelector("header div span.bg-success").innerText = "Compeleted : " + doneCounter;
     document.querySelector("header div span.bg-warning").innerText = "In Progress : " + tasks.length;
@@ -77,9 +76,15 @@ function render(data) {  // Function to render new row with client Data
 
         checkBtn.addEventListener("click", jobDone)
         delBtn.addEventListener("click", cancelTask)
+        
 
-
-    })
+    })}else{
+        myList.innerHTML = "";
+        const noMatch = document.createElement("div");
+        noMatch.classList.add("alert","alert-info");
+        noMatch.innerHTML = " <strong>No More Task</strong> There is no more task, add new tasks"
+        myList.appendChild(noMatch);
+    }
 }
 
 
