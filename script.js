@@ -52,6 +52,10 @@ addBtn.addEventListener("click", (e)=>{
     addInput.value = "";
 })
 
+const noResult = function(){
+    
+}
+
 
 searchBar.addEventListener("input",{
     
