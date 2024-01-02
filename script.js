@@ -25,14 +25,15 @@ function search(array, searchElement) {  // a function to find any tasks that ma
     let result= [];
     if (searchBar.value.length == 0){render(tasks)}else{ // if search bar is empty no need to search! and after earse litter from input it should show tasks again!
         // esle; in put is not empty so now we start search process
-    array.forEach(element => {  // check to 
-        if (element.includes(searchElement)) {
+    array.forEach(element => {  
+        if (element.toLowerCase().includes(searchElement.toLowerCase())) {// check to searched words includes in our lis or not! I make both lower case to prevent Case sensivity
             result.push(element);
         }
     })
 
     if(result.length == 0){
         myList.innerHTML = "";
+        myList.ch
         const noMatch = document.createElement("div");
         noMatch.classList.add("alert","alert-danger");
         noMatch.innerHTML = " <strong>No Match Item </strong> Unfortunately, we were unable to find the item you searched for."
