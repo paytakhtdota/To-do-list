@@ -37,6 +37,7 @@ function search(array, searchElement) {  // a function to find any tasks that ma
         noMatch.classList.add("alert","alert-danger");
         noMatch.innerHTML = " <strong>No Match Item </strong> Unfortunately, we were unable to find the item you searched for."
         myList.appendChild(noMatch);
+        
 
 
     }else{render(result);}
@@ -46,10 +47,12 @@ function search(array, searchElement) {  // a function to find any tasks that ma
 
 
 function render(data) {  // Function to render new row with client Data
+    document.querySelector("header div span.bg-success").innerText = "Compeleted : " + doneCounter;
+    // count how many time a success BTN clicked
+    document.querySelector("header div span.bg-warning").innerText = "In Progress : " + tasks.length;
+    // count how many tasks are in the list
     if(data.length != 0){
     myList.innerHTML = "";  // make empty myList ul#tl before add new HTML codes
-    document.querySelector("header div span.bg-success").innerText = "Compeleted : " + doneCounter;
-    document.querySelector("header div span.bg-warning").innerText = "In Progress : " + tasks.length;
 
     data.forEach((element, index) => {  //forEach for create a li for each of element in the array
         const listItemDiv = document.createElement("div");
@@ -100,3 +103,4 @@ function cancelTask(event) {    // to handel bottun for remove an Item from list
     tasks.splice(event.target.dataset.id, 1);
     render(tasks);
 }
+
